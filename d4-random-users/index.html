@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <style>
+            .users div {
+                overflow: hidden;
+                padding: 20px;
+                border-bottom: 2px solid #cecece;
+            }
+           .users img {
+                float: left;
+                margin-right: 20px;
+            }
+           .users h2 {
+                text-transform: capitalize;
+            }
+           .users img {
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="notification">
+            App online
+        </h1>
+        <button onclick="APP.getUser();">Get random user</button>
+        <div id="users" class="users">
+
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

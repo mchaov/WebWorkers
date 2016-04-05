@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="app.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    </head>
+    <body>
+        <div class="menu">
+            Worker:
+            <a href="javascript:;" onclick="mainWorker.postMessage({generateTransferrable: ''});">Generate</a> |
+            <a href="javascript:;" onclick="mainWorker.postMessage({sendBuffer: ''});">Send to main</a> |
+            <a href="javascript:;" onclick="mainWorker.postMessage({test: ''});">Test</a>
+        </div>
+        <div class="menu">
+            Main Script:
+            <a href="javascript:;" onclick="APP.sendBuffer();">Send to worker</a> |
+            <a href="javascript:;" onclick="APP.test();">Test</a>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

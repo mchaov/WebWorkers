@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #dedede;
+    border-bottom: 1px solid #cecece;
+}
+
+.isOnline .notification {
+    font-weight: bold;
+    background: #d9ffd9;
+    border-bottom: 1px solid #adccad;
+}
+
+.users div {
+    font-size: 11px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: left;
+    white-space: nowrap;
+    border: 1px solid #cecece;
+    display: inline-block;
+    width: 48%;
+    height: 90px;
+    box-sizing: border-box;
+}
+.users img {
+    float: left;
+    margin-right: 20px;
+}
+.users h2 {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.users img {
+    border-radius: 10px;
+}
+
+.menu {
+    padding: 0 5px;
+}
+
+.menu * {
+    opacity: .3;
+    pointer-events: none;
+}
+
+.isOnline .menu * {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.primes {
+    position: fixed;
+    background: #fff;
+    padding: 10px;
+    width: 33%;
+    box-sizing: border-box;
+    text-align: center;
+    will-change: transform;
+}
+
+table {
+    width: 100%;
+}
+table td {
+    text-align: center;
+    vertical-align: top;
+    width: 33%;
+}
