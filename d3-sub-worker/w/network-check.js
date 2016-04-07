@@ -11,7 +11,7 @@ function handler(){
 
 function testConnection(){
     var r = new XMLHttpRequest();
-    r.open('GET', 'http://10.1.0.93/');
+    r.open('GET', 'http://localhost');
     r.onreadystatechange = handler;
     r.send();
 }
