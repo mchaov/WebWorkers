@@ -138,7 +138,7 @@ APP.intervals = function(action){
     } else {
         APP.ints = true;
         APP.int1 = setInterval(APP.getImage, interval);
-        APP.int2 = setInterval(APP.getUser, 1);
+        APP.int2 = setInterval(APP.getUser, interval / 4);
     }
 };
 

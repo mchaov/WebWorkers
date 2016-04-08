@@ -9,8 +9,8 @@ function commInterface(fns){
 }
 
 APP.primes = function() {
-    j = 1000000000;
-    primes: while (j > 0) {
+    //j = 1000000000;
+    primes: while (true) {
         n += 1;
         for (; i <= Math.sqrt(n); i += 1) {
             if (n % i == 0) {
