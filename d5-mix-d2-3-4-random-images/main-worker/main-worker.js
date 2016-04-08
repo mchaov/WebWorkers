@@ -23,9 +23,7 @@ APP.getUser = function(){
         if(this.readyState === XMLHttpRequest.DONE){
 
             if(this.status === 200){
-
-                postMessage({setUser: JSON.parse(this.response).results[0].user});
-
+                postMessage({setUser: JSON.parse(this.response).results[0]});
             }
 
         }
