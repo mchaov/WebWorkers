@@ -1,17 +1,17 @@
 function handler(){
     if(this.readyState === XMLHttpRequest.DONE){
         if(this.status === 200){
-            postMessage({status: true});
+            postMessage('true');
         }
         else{
-            postMessage({status: false});
+            postMessage('false');
         }
     }
 }
 
 function testConnection(){
     var r = new XMLHttpRequest();
-    r.open('GET', 'http://localhost');
+    r.open('GET', 'http://localhost/');
     r.onreadystatechange = handler;
     r.send();
 }

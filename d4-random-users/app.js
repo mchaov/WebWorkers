@@ -1,35 +1,11 @@
-var APP = {},
-	worker,
-	title = document.getElementById('notification'),
+var worker,
 	users = document.getElementById('users');
 
-function commInterface(fns){
-    for(var fn in fns){
-        if(typeof APP[fn] === 'function') {
-            APP[fn](fns[fn]);
-        }
-    }
-}
-
-APP.isOnline = true;
-APP.users = new Array();
-
-APP.status = function(online){
-	var status = online === true ? 'online' : 'offline';
-	APP.isOnline = online;
-	title.innerHTML = 'App ' + status;
+function getUser(){
+    worker.postMessage('');
 };
 
-APP.getUser = function(){
-    if(APP.isOnline){
-        return worker.postMessage({getUser: ''});
-    }
-    alert('APP OFFLINE!');
-};
-
-APP.setUser = function(user){
-    this.users.push(user);
-
+function setUser(user){
     var img = new Image(),
         h2 = document.createElement('h2'),
         p = document.createElement('p'),
@@ -49,5 +25,7 @@ APP.setUser = function(user){
 worker = new Worker('w/main-worker.js');
 
 worker.onmessage = function(e) {
-	commInterface(e.data);
+	setUser(e.data);
 };
+
+//setInterval(getUser, 500);
