@@ -11,7 +11,7 @@ primes: while (true) {
 }
 
 onmessage = function(e) {
-    commInterface(e.data);
+    console.log(e.data);
 };
 
 //close();
